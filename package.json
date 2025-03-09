@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@shgk/vue-course-taskbook": "^6.0.0",
+    "@types/node": "^22.13.9",
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
     "eslint": "^9.5.0",
