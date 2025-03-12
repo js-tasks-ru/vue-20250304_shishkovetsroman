@@ -23,6 +23,5 @@ export default defineComponent({
     <div class="map" @click="handleClick">
       <img class="map-image" src="./map.png" alt="Map" draggable="false"  />
       <span class="pin" :style="{ left:x + 'px', top: y + 'px'}">📍</span>
-    </div>
-  `,
+    </div>`,
 })
