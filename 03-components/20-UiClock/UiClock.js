@@ -1,4 +1,4 @@
-import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue'
+import { defineComponent, onUnmounted, onMounted, ref } from 'vue'
 
 const getCurrentTime = () => {
 
@@ -19,7 +19,7 @@ export default defineComponent({
       intervalId = setInterval(() => currentTime.value = getCurrentTime(), 1000)
     })
 
-    onBeforeUnmount(() => {
+    onUnmounted(() => {
       clearInterval(intervalId)
     })
 
