@@ -3,7 +3,7 @@ import EmailListItem from './EmailListItem.js'
 
 export default defineComponent({
   name: 'EmailList',
-
+  emits: ['delete'],
   components: {
     EmailListItem,
   },
@@ -14,7 +14,7 @@ export default defineComponent({
       required: true,
     },
   },
-
+  
   template: `
     <ul class="emails-list unstyled-list" aria-label="Emails">
       <EmailListItem
@@ -22,6 +22,7 @@ export default defineComponent({
         :key="email"
         :email="email"
         :marked="isMarked"
+        @delete="$emit('delete', index)"
       />
     </ul>
   `,
