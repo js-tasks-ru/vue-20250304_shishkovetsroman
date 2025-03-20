@@ -18,7 +18,7 @@ export default defineComponent({
   template: `
     <div>
       <h1 class="title">Погода в Средиземье</h1>
-      <WeatherList class="weather-list unstyled-list" :weather-data="weatherData" />
+      <WeatherList :weather-data="weatherData" />
     </div>
   `,
 })
