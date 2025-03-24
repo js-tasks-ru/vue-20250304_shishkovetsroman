@@ -33,6 +33,7 @@ const agendaItemIcons = {
 } as const
 
 const icon = computed(() => agendaItemIcons[props.agendaItem.type])
+
 const title = computed(() => agendaItemDefaultTitles[props.agendaItem.type])
 </script>
 
