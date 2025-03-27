@@ -11,9 +11,9 @@ const props = defineProps<{
 }>()
 
 defineSlots<{
-  default: Slot
-  label: Slot
-  description: Slot
+  default?: Slot
+  label?: Slot
+  description?: Slot
 }>()
 </script>
 
@@ -21,12 +21,10 @@ defineSlots<{
   <div class="form-group">
     <div class="form-group__label-wrapper">
       <label :for="props.for" class="form-group__label">
-        <template v-if="!$slots.label"> {{ label }} </template>
-        <slot name="label"></slot>
+        <slot name="label"> {{ label }}</slot>
       </label>
       <div class="form-group__description">
-        <template v-if="!$slots.description"> {{ description }} </template>
-        <slot name="description"></slot>
+        <slot name="description"> {{ description }}</slot>
       </div>
     </div>
     <div class="form-group__control">
