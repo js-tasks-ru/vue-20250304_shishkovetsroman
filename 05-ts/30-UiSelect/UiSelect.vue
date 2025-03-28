@@ -1,8 +1,8 @@
 <script setup lang="ts" generic="T extends string">
-const model = defineModel({ type: String })
+const model = defineModel<T>()
 
 defineProps<{
-  options: { value: T; text: T }[]
+  options: { value: T; text: string }[]
 }>()
 </script>
 
